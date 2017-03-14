@@ -13,7 +13,7 @@ import Cleanse
 class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
     var window: UIWindow?
-    var navigationController : UINavigationController?
+//    var navigationController : UINavigationController?
     var rootViewController:UIViewController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {

@@ -30,12 +30,7 @@ extension NotesViewController {
                 .to(value:StaticNotesRepository())
             
             
-            // This satisfies UIWindow depending on TaggedProvider<UIViewController.Root>
-            // The actual root is our RootViewController wrapped in a UINavigationController
-            binder
-                .bind()
-                .tagged(with: UIViewController.Root.self)
-                .to { UINavigationController(rootViewController: $0 as NotesViewController) }
+            
         }
     }
 }

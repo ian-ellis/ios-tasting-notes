@@ -25,7 +25,15 @@ struct AppComponent: Cleanse.RootComponent {
 
 struct CoreAppModule: Cleanse.Module {
     static func configure<B:Binder>(binder: B) {
+        
+        
         binder.include(module: NotesViewController.Module.self)
+        // This satisfies UIWindow depending on TaggedProvider<UIViewController.Root>
+        // The actual root is our RootViewController wrapped in a UINavigationController
+        binder
+            .bind()
+            .tagged(with: UIViewController.Root.self)
+            .to { UINavigationController(rootViewController: $0 as NotesViewController) }
         
         
     }
