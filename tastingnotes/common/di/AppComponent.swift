@@ -13,7 +13,7 @@ struct AppComponent: Cleanse.RootComponent {
 
     static func configure<B:Binder>(binder: B) {
         binder.include(module: CoreAppModule.self)
-        binder.include(module: UIWindow.Module.self)
+        binder.include(module: UIWindowModule.self)
     }
 
     
@@ -26,8 +26,12 @@ struct AppComponent: Cleanse.RootComponent {
 struct CoreAppModule: Cleanse.Module {
     static func configure<B:Binder>(binder: B) {
         
+        binder.include(module: ViewControllerModule.self)
+        binder.include(module: ViewModelModule.self)
+        binder.include(module: RepositoryModule.self)
+        binder.include(module: ViewModule.self)
+        binder.include(module: PresenterModule.self)
         
-        binder.include(module: NotesViewController.Module.self)
         // This satisfies UIWindow depending on TaggedProvider<UIViewController.Root>
         // The actual root is our RootViewController wrapped in a UINavigationController
         binder

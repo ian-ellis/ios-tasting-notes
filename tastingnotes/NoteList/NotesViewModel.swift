@@ -37,7 +37,10 @@ class NotesViewModel {
 
     func tearDown(){
         subscription?.dispose()
+        notes.clear()
+        loading.clear()
     }
+    
 
 
 }

@@ -9,15 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotesViewController" customModule="tastingnotes" customModuleProvider="target">
-            <connections>
-                <outlet property="loadingIndicator" destination="Fyo-NM-z7Z" id="Q9e-Zs-MLI"/>
-                <outlet property="table" destination="HKr-a5-PRV" id="K3j-c8-Lhm"/>
-                <outlet property="view" destination="iN0-l3-epB" id="jtg-86-faR"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NotesView" customModule="tastingnotes" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -32,6 +26,10 @@
                 </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="loadingIndicator" destination="Fyo-NM-z7Z" id="QZI-ur-bfd"/>
+                <outlet property="table" destination="HKr-a5-PRV" id="JSm-ry-H4g"/>
+            </connections>
             <point key="canvasLocation" x="25.5" y="51.5"/>
         </view>
     </objects>

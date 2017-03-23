@@ -5,38 +5,47 @@
 
 import Foundation
 import UIKit
+import Cleanse
 
 class NotesPresenter {
 
-    private let table: UITableView
-    private let loading: UIActivityIndicatorView
+    public let view:LoadingTableView
+    private let viewModel:NotesViewModel
     private let tableViewDelegate: NotesTableDelegate
+    
 
-    init(_ viewModel: NotesViewModel, table: UITableView, loading: UIActivityIndicatorView) {
-        self.table = table
-        self.loading = loading
-        self.tableViewDelegate = NotesTableDelegate(table)
-        self.table.delegate = tableViewDelegate
-        self.table.dataSource = tableViewDelegate
-
-        viewModel.notes.onChange(notesChanged)
-        viewModel.loading.onChange(loadingChanged)
+    init(viewModel:NotesViewModel, view:TaggedProvider<LoadingTable>) {
+        
+        self.view = view.get()
+        self.viewModel = viewModel
+       
+        self.tableViewDelegate = NotesTableDelegate(self.view.table)
+        self.view.table.delegate = tableViewDelegate
+        self.view.table.dataSource = tableViewDelegate
+        
+        self.viewModel.notes.onChange(notesChanged)
+        self.viewModel.loading.onChange(loadingChanged)
+    }
+    
+    
+    public func tearDown() {
+        viewModel.tearDown()
     }
 
 
     private func notesChanged(notes: Array<NoteEntity>) -> Void {
         tableViewDelegate.notes = notes
-        table.reloadData()
+        view.table.reloadData()
     }
 
     private func loadingChanged(isLoading: Bool) -> Void {
-        loading.isHidden = !isLoading
+        view.loadingIndicator.isHidden = !isLoading
         if (isLoading) {
-            loading.startAnimating()
+            view.loadingIndicator.startAnimating()
         } else {
-            loading.stopAnimating()
+            view.loadingIndicator.stopAnimating()
         }
-        table.isHidden = isLoading
+        view.table.isHidden = isLoading
     }
 
 

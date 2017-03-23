@@ -9,13 +9,11 @@
 import Foundation
 import Cleanse
 
-//struct PresenterModule : Cleanse.Module {
+struct PresenterModule : Cleanse.Module {
 
-//    static func configure<B:Binder>(binder: B) {
-//        
-//        binder
-//            .bind(NotesPresenter.self)
-//            .to(value: NotesPresenter())
-//        
-//    }
-//}
+    static func configure<B:Binder>(binder: B) {
+        binder.bind(NotesPresenter.self)
+            .to(factory: NotesPresenter.init)
+        
+    }
+}

@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8569634A1E789C7500704C76 /* ViewControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856963491E789C7500704C76 /* ViewControllerModule.swift */; };
+		8569634C1E789DF700704C76 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569634B1E789DF700704C76 /* RepositoryModule.swift */; };
+		8569634F1E78A0DF00704C76 /* LoadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569634E1E78A0DF00704C76 /* LoadingTableView.swift */; };
 		857CA9461E6F768D003375AB /* Cleanse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857CA9451E6F768D003375AB /* Cleanse.framework */; };
+		85AA19531E78A35D008B5976 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19521E78A35D008B5976 /* NotesView.swift */; };
+		85AA19551E78A4C6008B5976 /* ViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19541E78A4C6008B5976 /* ViewModule.swift */; };
+		85AA19571E78A995008B5976 /* LoadingTableViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */; };
+		85AA195A1E78AAC3008B5976 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19591E78AAC3008B5976 /* UIViewExtension.swift */; };
 		85DB37D81E7502950048F42F /* UIWindowModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37D71E7502950048F42F /* UIWindowModule.swift */; };
 		85DB37DA1E7503460048F42F /* RootViewControllerTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37D91E7503460048F42F /* RootViewControllerTag.swift */; };
-		85DB37DC1E7503FD0048F42F /* NotesViewControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37DB1E7503FD0048F42F /* NotesViewControllerModule.swift */; };
-		85DB37DE1E750A980048F42F /* Notes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85DB37DD1E750A980048F42F /* Notes.xib */; };
+		85DB37DE1E750A980048F42F /* NotesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85DB37DD1E750A980048F42F /* NotesView.xib */; };
 		85DB37E01E75F19D0048F42F /* PresenterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37DF1E75F19D0048F42F /* PresenterModule.swift */; };
 		85DB37E21E75F2900048F42F /* ViewModleModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37E11E75F2900048F42F /* ViewModleModule.swift */; };
 		85DB37E51E75F8880048F42F /* NotesRepoTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85DB37E41E75F8880048F42F /* NotesRepoTag.swift */; };
@@ -57,11 +63,17 @@
 		503089F7EBE6A18645B706EE /* Pods-tastingnotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesTests/Pods-tastingnotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		815C7D639133FCF9D1324F4E /* Pods_tastingnotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tastingnotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E1A3C1EB292609102F2A72 /* Pods-tastingnotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesUITests/Pods-tastingnotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		856963491E789C7500704C76 /* ViewControllerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModule.swift; sourceTree = "<group>"; };
+		8569634B1E789DF700704C76 /* RepositoryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
+		8569634E1E78A0DF00704C76 /* LoadingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableView.swift; sourceTree = "<group>"; };
 		857CA9451E6F768D003375AB /* Cleanse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cleanse.framework; path = ../Cleanse/build/Debug/Cleanse.framework; sourceTree = "<group>"; };
+		85AA19521E78A35D008B5976 /* NotesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
+		85AA19541E78A4C6008B5976 /* ViewModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModule.swift; sourceTree = "<group>"; };
+		85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewTag.swift; sourceTree = "<group>"; };
+		85AA19591E78AAC3008B5976 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		85DB37D71E7502950048F42F /* UIWindowModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWindowModule.swift; sourceTree = "<group>"; };
 		85DB37D91E7503460048F42F /* RootViewControllerTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewControllerTag.swift; sourceTree = "<group>"; };
-		85DB37DB1E7503FD0048F42F /* NotesViewControllerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewControllerModule.swift; sourceTree = "<group>"; };
-		85DB37DD1E750A980048F42F /* Notes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Notes.xib; sourceTree = "<group>"; };
+		85DB37DD1E750A980048F42F /* NotesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesView.xib; sourceTree = "<group>"; };
 		85DB37DF1E75F19D0048F42F /* PresenterModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresenterModule.swift; sourceTree = "<group>"; };
 		85DB37E11E75F2900048F42F /* ViewModleModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModleModule.swift; sourceTree = "<group>"; };
 		85DB37E41E75F8880048F42F /* NotesRepoTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesRepoTag.swift; sourceTree = "<group>"; };
@@ -142,11 +154,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		856963481E789B5400704C76 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				85DB37D71E7502950048F42F /* UIWindowModule.swift */,
+				85DB37E11E75F2900048F42F /* ViewModleModule.swift */,
+				856963491E789C7500704C76 /* ViewControllerModule.swift */,
+				8569634B1E789DF700704C76 /* RepositoryModule.swift */,
+				85DB37DF1E75F19D0048F42F /* PresenterModule.swift */,
+				85AA19541E78A4C6008B5976 /* ViewModule.swift */,
+			);
+			name = modules;
+			sourceTree = "<group>";
+		};
+		85AA19581E78AAA7008B5976 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				85AA19591E78AAC3008B5976 /* UIViewExtension.swift */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
 		85DB37E31E75F8600048F42F /* qualifiers */ = {
 			isa = PBXGroup;
 			children = (
 				85DB37D91E7503460048F42F /* RootViewControllerTag.swift */,
 				85DB37E41E75F8880048F42F /* NotesRepoTag.swift */,
+				85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */,
 			);
 			name = qualifiers;
 			sourceTree = "<group>";
@@ -168,12 +202,9 @@
 		B8EED277C96CFC6D8D7348B1 /* di */ = {
 			isa = PBXGroup;
 			children = (
+				856963481E789B5400704C76 /* modules */,
 				85DB37E31E75F8600048F42F /* qualifiers */,
 				B8EED8DF0BB19C448ABBC216 /* AppComponent.swift */,
-				85DB37D71E7502950048F42F /* UIWindowModule.swift */,
-				85DB37DB1E7503FD0048F42F /* NotesViewControllerModule.swift */,
-				85DB37DF1E75F19D0048F42F /* PresenterModule.swift */,
-				85DB37E11E75F2900048F42F /* ViewModleModule.swift */,
 			);
 			path = di;
 			sourceTree = "<group>";
@@ -197,11 +228,12 @@
 		B8EED81A5867242BF5287FBB /* NoteList */ = {
 			isa = PBXGroup;
 			children = (
-				85DB37DD1E750A980048F42F /* Notes.xib */,
+				85DB37DD1E750A980048F42F /* NotesView.xib */,
 				B8EED07559A40E814D5C77A2 /* NotesViewController.swift */,
 				B8EEDB2676335713489E40DA /* NotesViewModel.swift */,
 				B8EEDA0F67D501ECCD49368C /* NotesPresenter.swift */,
 				B8EEDB15BCDC0C3F1C2B6E6B /* NotesTableDelegate.swift */,
+				85AA19521E78A35D008B5976 /* NotesView.swift */,
 			);
 			path = NoteList;
 			sourceTree = "<group>";
@@ -210,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				B8EED9E1DEAA261D34C793F7 /* observable */,
+				8569634E1E78A0DF00704C76 /* LoadingTableView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -273,6 +306,7 @@
 		B8EEDBCA478FD67E352D9EA5 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				85AA19581E78AAA7008B5976 /* extension */,
 				B8EED8FC680EE0AF385FB9F1 /* presentation */,
 				B8EED277C96CFC6D8D7348B1 /* di */,
 				B8EEDACE36A40E72E8AF6E4A /* repositories */,
@@ -401,7 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EEDE72782B3A4E4DC7BF30 /* Assets.xcassets in Resources */,
-				85DB37DE1E750A980048F42F /* Notes.xib in Resources */,
+				85DB37DE1E750A980048F42F /* NotesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,20 +584,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8569634F1E78A0DF00704C76 /* LoadingTableView.swift in Sources */,
 				B8EEDA30F89CE140B69732A1 /* AppDelegate.swift in Sources */,
+				85AA195A1E78AAC3008B5976 /* UIViewExtension.swift in Sources */,
+				8569634A1E789C7500704C76 /* ViewControllerModule.swift in Sources */,
 				B8EED6B0A0F09BFF42588104 /* NotesViewController.swift in Sources */,
+				85AA19551E78A4C6008B5976 /* ViewModule.swift in Sources */,
 				B8EED30B2C18EBD518C12164 /* NotesViewModel.swift in Sources */,
 				B8EEDB22B8B710D0EF09B57F /* NotesPresenter.swift in Sources */,
 				B8EEDFBBB16140746428E16D /* ObervableField.swift in Sources */,
 				85DB37DA1E7503460048F42F /* RootViewControllerTag.swift in Sources */,
 				B8EED959361A86F98DAAC8C8 /* NoteEntity.swift in Sources */,
 				85DB37E51E75F8880048F42F /* NotesRepoTag.swift in Sources */,
-				85DB37DC1E7503FD0048F42F /* NotesViewControllerModule.swift in Sources */,
+				8569634C1E789DF700704C76 /* RepositoryModule.swift in Sources */,
 				B8EED24C641037596F15BAE4 /* NotesTableDelegate.swift in Sources */,
 				85DB37D81E7502950048F42F /* UIWindowModule.swift in Sources */,
+				85AA19531E78A35D008B5976 /* NotesView.swift in Sources */,
 				85DB37E01E75F19D0048F42F /* PresenterModule.swift in Sources */,
 				B8EED1412CA5D1AF4C5B55FB /* NotesRepository.swift in Sources */,
 				B8EED2A78E4323C8361EDCE4 /* StaticNotesRepository.swift in Sources */,
+				85AA19571E78A995008B5976 /* LoadingTableViewTag.swift in Sources */,
 				B8EED5A32206A5067A6E068E /* AppComponent.swift in Sources */,
 				85DB37E21E75F2900048F42F /* ViewModleModule.swift in Sources */,
 			);
