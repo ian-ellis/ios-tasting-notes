@@ -13,6 +13,7 @@ struct PresenterModule : Cleanse.Module {
 
     static func configure<B:Binder>(binder: B) {
         binder.bind(NotesPresenter.self)
+            .tagged(with: NotesPresentable.self)
             .to(factory: NotesPresenter.init)
         
     }

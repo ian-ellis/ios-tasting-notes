@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8566AB971E862F7700115A4E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566AB961E862F7700115A4E /* Presentable.swift */; };
+		8566AB991E86304600115A4E /* NotesPresenterTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8566AB981E86304600115A4E /* NotesPresenterTag.swift */; };
 		8569634A1E789C7500704C76 /* ViewControllerModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856963491E789C7500704C76 /* ViewControllerModule.swift */; };
 		8569634C1E789DF700704C76 /* RepositoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569634B1E789DF700704C76 /* RepositoryModule.swift */; };
 		8569634F1E78A0DF00704C76 /* LoadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569634E1E78A0DF00704C76 /* LoadingTableView.swift */; };
@@ -63,6 +65,8 @@
 		503089F7EBE6A18645B706EE /* Pods-tastingnotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesTests/Pods-tastingnotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		815C7D639133FCF9D1324F4E /* Pods_tastingnotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tastingnotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E1A3C1EB292609102F2A72 /* Pods-tastingnotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesUITests/Pods-tastingnotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8566AB961E862F7700115A4E /* Presentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		8566AB981E86304600115A4E /* NotesPresenterTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesPresenterTag.swift; sourceTree = "<group>"; };
 		856963491E789C7500704C76 /* ViewControllerModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerModule.swift; sourceTree = "<group>"; };
 		8569634B1E789DF700704C76 /* RepositoryModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryModule.swift; sourceTree = "<group>"; };
 		8569634E1E78A0DF00704C76 /* LoadingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableView.swift; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				85DB37D91E7503460048F42F /* RootViewControllerTag.swift */,
 				85DB37E41E75F8880048F42F /* NotesRepoTag.swift */,
 				85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */,
+				8566AB981E86304600115A4E /* NotesPresenterTag.swift */,
 			);
 			name = qualifiers;
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			children = (
 				B8EED9E1DEAA261D34C793F7 /* observable */,
 				8569634E1E78A0DF00704C76 /* LoadingTableView.swift */,
+				8566AB961E862F7700115A4E /* Presentable.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 				B8EED6B0A0F09BFF42588104 /* NotesViewController.swift in Sources */,
 				85AA19551E78A4C6008B5976 /* ViewModule.swift in Sources */,
 				B8EED30B2C18EBD518C12164 /* NotesViewModel.swift in Sources */,
+				8566AB971E862F7700115A4E /* Presentable.swift in Sources */,
 				B8EEDB22B8B710D0EF09B57F /* NotesPresenter.swift in Sources */,
 				B8EEDFBBB16140746428E16D /* ObervableField.swift in Sources */,
 				85DB37DA1E7503460048F42F /* RootViewControllerTag.swift in Sources */,
@@ -598,6 +605,7 @@
 				85DB37E51E75F8880048F42F /* NotesRepoTag.swift in Sources */,
 				8569634C1E789DF700704C76 /* RepositoryModule.swift in Sources */,
 				B8EED24C641037596F15BAE4 /* NotesTableDelegate.swift in Sources */,
+				8566AB991E86304600115A4E /* NotesPresenterTag.swift in Sources */,
 				85DB37D81E7502950048F42F /* UIWindowModule.swift in Sources */,
 				85AA19531E78A35D008B5976 /* NotesView.swift in Sources */,
 				85DB37E01E75F19D0048F42F /* PresenterModule.swift in Sources */,

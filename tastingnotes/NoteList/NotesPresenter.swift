@@ -7,9 +7,9 @@ import Foundation
 import UIKit
 import Cleanse
 
-class NotesPresenter {
+class NotesPresenter : Presentable {
 
-    public let view:LoadingTableView
+    private let view:LoadingTableView
     private let viewModel:NotesViewModel
     private let tableViewDelegate: NotesTableDelegate
     
@@ -25,6 +25,10 @@ class NotesPresenter {
         
         self.viewModel.notes.onChange(notesChanged)
         self.viewModel.loading.onChange(loadingChanged)
+    }
+    
+    public func get() -> UIView {
+        return self.view.get()
     }
     
     

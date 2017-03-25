@@ -7,14 +7,14 @@
 //
 
 import UIKit
-
+import Cleanse
 
 class NotesViewController: UIViewController {
 
-    private let presenter: NotesPresenter
+    private let presenter: Presentable
 
-    init(presenter:NotesPresenter) {
-        self.presenter = presenter
+    init(presenter:TaggedProvider<NotesPresentable>) {
+        self.presenter = presenter.get()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -25,7 +25,7 @@ class NotesViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = presenter.view.get()
+        self.view = presenter.get()
     }
     
     

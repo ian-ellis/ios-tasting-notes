@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-protocol LoadingTableView {
+protocol LoadingTableView : Presentable {
     weak var loadingIndicator: UIActivityIndicatorView! {get set}
     weak var table: UITableView! {get set}
-    func get() -> UIView
+    
 }
 
 
