@@ -7,12 +7,14 @@
 //
 
 import Foundation
+import UIKit
 import Cleanse
 
 struct ViewControllerModule : Cleanse.Module {
     
     static func configure<B:Binder>(binder: B) {
-        binder.bind(NotesViewController.self)
+        binder.bind(UIViewController.self)
+            .tagged(with: UIViewController.Root.self)
             .to(factory: NotesViewController.init)
     }
 }

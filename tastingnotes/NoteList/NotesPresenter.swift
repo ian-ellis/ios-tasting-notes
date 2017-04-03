@@ -25,6 +25,7 @@ class NotesPresenter : Presentable {
         
         self.viewModel.notes.onChange(notesChanged)
         self.viewModel.loading.onChange(loadingChanged)
+    
     }
     
     public func get() -> UIView {
@@ -41,7 +42,7 @@ class NotesPresenter : Presentable {
         tableViewDelegate.notes = notes
         view.table.reloadData()
     }
-
+    
     private func loadingChanged(isLoading: Bool) -> Void {
         view.loadingIndicator.isHidden = !isLoading
         if (isLoading) {

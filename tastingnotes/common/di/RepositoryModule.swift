@@ -16,7 +16,8 @@ struct RepositoryModule : Cleanse.Module {
         binder
             .bind(StaticNotesRepository.self)
             .tagged(with: StaticNotes.self)
-            .to(value:StaticNotesRepository())
+            .asSingleton()
+            .to(factory:StaticNotesRepository.init)
 
     }
 }

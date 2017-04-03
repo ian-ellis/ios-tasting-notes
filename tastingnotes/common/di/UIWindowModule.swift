@@ -18,9 +18,8 @@ struct UIWindowModule : Cleanse.Module {
         binder
             .bind(UIWindow.self)
             .asSingleton()
-            .to { (rootViewController: TaggedProvider<UIViewController.Root>) in
+            .to {
                 let window = UIWindow(frame: UIScreen.main.bounds)
-                window.rootViewController = rootViewController.get()
                 return window
         }
     }

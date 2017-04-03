@@ -13,6 +13,7 @@ class NotesView : UIView, LoadingTableView {
 
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var table: UITableView!
+    @IBOutlet weak var label: UILabel!
     
     func get() -> UIView {
         return self

@@ -13,31 +13,15 @@ import Cleanse
 class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
     var window: UIWindow?
-//    var navigationController : UINavigationController?
-    var rootViewController:UIViewController?
-
+    var appRoot:AppRoot!
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let propertyInjector: PropertyInjector<AppDelegate>
-
         // Fake mode makes it easy to test and demo the app. It uses in process versions of the services
-
-        propertyInjector = try! ComponentFactory.of(AppComponent.self, validate: false).build()
-        // Now inject the properties into ourselves
-        propertyInjector.injectProperties(into: self)
-        // window should now be defined
-        precondition(window != nil)
+        appRoot = try! ComponentFactory.of(AppComponent.self).build()
+        window = appRoot.window
+        window!.rootViewController = appRoot.rootViewController
         window!.makeKeyAndVisible()
         
-//        rootViewController = NotesViewController()
-//        self.navigationController = UINavigationController()
-//        if let navigationController = self.navigationController{
-//            navigationController.delegate = self
-//            navigationController.setNavigationBarHidden(true, animated: false)
-//            if let rootViewController = self.rootViewController {
-//                navigationController.pushViewController(rootViewController, animated: false)
-//            }
-//            
-//        }
         return true
     }
 
@@ -72,13 +56,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
 
 
 }
-extension AppDelegate {
 
-
-    func injectProperties(window: UIWindow, viewController:NotesViewController) {
-        self.window = window
-        self.rootViewController = viewController
-    }
-
-}
 

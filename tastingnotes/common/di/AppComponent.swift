@@ -7,42 +7,37 @@ import Foundation
 import Cleanse
 import UIKit
 
+struct AppRoot {
+    let window: UIWindow
+    let rootViewController:UIViewController
+    let notesViewControllerComponentFactory: ComponentFactory<NotesViewControllerComponent>
+
+    
+    init(window:UIWindow, rootViewController:TaggedProvider<UIViewController.Root>, notesViewControllerComponentFactory: ComponentFactory<NotesViewControllerComponent>){
+        self.window = window
+        self.rootViewController = rootViewController.get()
+        self.notesViewControllerComponentFactory = notesViewControllerComponentFactory
+    }
+
+}
+
 struct AppComponent: Cleanse.RootComponent {
-    typealias Root = PropertyInjector<AppDelegate>
+    typealias Root = AppRoot
     typealias Scope = Singleton
 
     static func configure<B:Binder>(binder: B) {
-        binder.include(module: CoreAppModule.self)
-        binder.include(module: UIWindowModule.self)
-    }
-
-    
-    static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {
-        return bind.propertyInjector(configuredWith: CoreAppModule.configureAppDelegateInjector)
-    }
-}
-
-
-struct CoreAppModule: Cleanse.Module {
-    static func configure<B:Binder>(binder: B) {
         
         binder.include(module: ViewControllerModule.self)
-        binder.include(module: ViewModelModule.self)
+        binder.include(module: UIWindowModule.self)
         binder.include(module: RepositoryModule.self)
-        binder.include(module: ViewModule.self)
-        binder.include(module: PresenterModule.self)
-        
-        // This satisfies UIWindow depending on TaggedProvider<UIViewController.Root>
-        // The actual root is our RootViewController wrapped in a UINavigationController
-        binder
-            .bind()
-            .tagged(with: UIViewController.Root.self)
-            .to { UINavigationController(rootViewController: $0 as NotesViewController) }
-        
-        
+
+        binder.install(dependency: NotesViewControllerComponent.self)
     }
 
-    static func configureAppDelegateInjector(binder bind: PropertyInjectionReceiptBinder<AppDelegate>) -> BindingReceipt<PropertyInjector<AppDelegate>> {
-        return bind.to(injector: AppDelegate.injectProperties)
+    static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {
+        return bind.to(factory: Root.init)
     }
 }
+
+
+

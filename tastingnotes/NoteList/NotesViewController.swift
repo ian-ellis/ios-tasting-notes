@@ -11,10 +11,9 @@ import Cleanse
 
 class NotesViewController: UIViewController {
 
-    private let presenter: Presentable
+    private var presenter: Presentable?
 
-    init(presenter:TaggedProvider<NotesPresentable>) {
-        self.presenter = presenter.get()
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -25,7 +24,13 @@ class NotesViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
-        self.view = presenter.get()
+        let appRoot:AppRoot? = (UIApplication.shared.delegate as! AppDelegate).appRoot
+        let factory:ComponentFactory<NotesViewControllerComponent> = appRoot!.notesViewControllerComponentFactory
+        let root = factory.build("NotesViewController")
+        //let root = try!  ComponentFactory.of(NotestViewControllerCompnent.self, validate: false).build()
+        self.presenter = root.presenter
+
+        self.view = self.presenter!.get()
     }
     
     
@@ -34,6 +39,4 @@ class NotesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }

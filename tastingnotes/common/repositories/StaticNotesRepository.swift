@@ -7,9 +7,9 @@ import Foundation
 import RxSwift
 
 class StaticNotesRepository: NotesRepository {
+
     
     init(){
-        var tmp = ""
     }
 
     func getNotes() -> Observable<Array<NoteEntity>> {
