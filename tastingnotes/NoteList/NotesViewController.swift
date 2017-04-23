@@ -11,7 +11,7 @@ import Cleanse
 
 class NotesViewController: UIViewController {
 
-    private var presenter: Presentable?
+    private var presenter: ViewControllerRoot?
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -27,11 +27,14 @@ class NotesViewController: UIViewController {
         let appRoot:AppRoot? = (UIApplication.shared.delegate as! AppDelegate).appRoot
         let factory:ComponentFactory<NotesViewControllerComponent> = appRoot!.notesViewControllerComponentFactory
         let root = factory.build("NotesViewController")
-        //let root = try!  ComponentFactory.of(NotestViewControllerCompnent.self, validate: false).build()
+        
         self.presenter = root.presenter
-
         self.view = self.presenter!.get()
+        
+        self.navigationItem.title = root.presenter.title
     }
+    
+    
     
     
 

@@ -11,7 +11,7 @@ import Cleanse
 
 struct NotesVCRoot
 {
-    let presenter:Presentable
+    let presenter:ViewControllerRoot
     init(pres:TaggedProvider<NotesPresentable>){
         presenter = pres.get()
     }
@@ -25,4 +25,5 @@ struct NotesViewControllerComponent : ViewControllerComponent {
     static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {
         return bind.to(factory: Root.init)
     }
+
 }

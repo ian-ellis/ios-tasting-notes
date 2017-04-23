@@ -7,11 +7,15 @@ import Foundation
 import UIKit
 import Cleanse
 
-class NotesPresenter : Presentable {
+class NotesPresenter : ViewControllerRoot {
 
     private let view:LoadingTableView
     private let viewModel:NotesViewModel
     private let tableViewDelegate: NotesTableDelegate
+    var title: String { get {
+            return "Notes"
+        }
+    }
     
 
     init(viewModel:NotesViewModel, view:TaggedProvider<LoadingTable>) {

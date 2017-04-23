@@ -18,4 +18,5 @@ class NotesView : UIView, LoadingTableView {
     func get() -> UIView {
         return self
     }
+    
 }

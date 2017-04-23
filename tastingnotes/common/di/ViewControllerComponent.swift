@@ -22,8 +22,5 @@ extension ViewControllerComponent {
         binder.include(module: PresenterModule.self)
     }
     
-    static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {
-        return bind.to(factory: Root.init)
-    }
 }
 

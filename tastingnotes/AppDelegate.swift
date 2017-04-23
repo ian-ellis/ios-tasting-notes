@@ -19,7 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         // Fake mode makes it easy to test and demo the app. It uses in process versions of the services
         appRoot = try! ComponentFactory.of(AppComponent.self).build()
         window = appRoot.window
-        window!.rootViewController = appRoot.rootViewController
+        appRoot.navigationController.setViewControllers([appRoot.rootViewController], animated: false)
+        window!.rootViewController = appRoot.navigationController
         window!.makeKeyAndVisible()
         
         return true

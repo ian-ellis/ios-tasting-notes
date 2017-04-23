@@ -19,9 +19,15 @@ struct UIWindowModule : Cleanse.Module {
             .bind(UIWindow.self)
             .asSingleton()
             .to {
-                let window = UIWindow(frame: UIScreen.main.bounds)
-                return window
+                return  UIWindow(frame: UIScreen.main.bounds)
         }
+        
+        binder
+            .bind(UINavigationController.self)
+            .asSingleton()
+            .to {
+                return UINavigationController()
+            }
     }
 }
 

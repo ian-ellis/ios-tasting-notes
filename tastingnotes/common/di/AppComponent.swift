@@ -10,11 +10,13 @@ import UIKit
 struct AppRoot {
     let window: UIWindow
     let rootViewController:UIViewController
+    let navigationController:UINavigationController
     let notesViewControllerComponentFactory: ComponentFactory<NotesViewControllerComponent>
-
     
-    init(window:UIWindow, rootViewController:TaggedProvider<UIViewController.Root>, notesViewControllerComponentFactory: ComponentFactory<NotesViewControllerComponent>){
+    
+    init(window:UIWindow, navigationController:UINavigationController, rootViewController:TaggedProvider<UIViewController.Root>, notesViewControllerComponentFactory: ComponentFactory<NotesViewControllerComponent>){
         self.window = window
+        self.navigationController = navigationController
         self.rootViewController = rootViewController.get()
         self.notesViewControllerComponentFactory = notesViewControllerComponentFactory
     }
