@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		85083E531EC6A8C7005EEC39 /* NoteDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85083E521EC6A8C7005EEC39 /* NoteDetails.xib */; };
+		85083E561EC6B0D6005EEC39 /* ClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85083E551EC6B0D6005EEC39 /* ClosedRangeExtension.swift */; };
+		85083E581EC6B396005EEC39 /* RangeBoundValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85083E571EC6B396005EEC39 /* RangeBoundValue.swift */; };
 		854BD7421E92225E001C6905 /* ViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7411E92225E001C6905 /* ViewControllerComponent.swift */; };
 		854BD7441E922EC9001C6905 /* ViewControllerIDTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7431E922EC9001C6905 /* ViewControllerIDTag.swift */; };
 		854BD7461E922F3B001C6905 /* NotesViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7451E922F3B001C6905 /* NotesViewControllerComponent.swift */; };
@@ -71,6 +73,8 @@
 		815C7D639133FCF9D1324F4E /* Pods_tastingnotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tastingnotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E1A3C1EB292609102F2A72 /* Pods-tastingnotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesUITests/Pods-tastingnotesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		85083E521EC6A8C7005EEC39 /* NoteDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteDetails.xib; sourceTree = "<group>"; };
+		85083E551EC6B0D6005EEC39 /* ClosedRangeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosedRangeExtension.swift; sourceTree = "<group>"; };
+		85083E571EC6B396005EEC39 /* RangeBoundValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeBoundValue.swift; sourceTree = "<group>"; };
 		854BD7411E92225E001C6905 /* ViewControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerComponent.swift; sourceTree = "<group>"; };
 		854BD7431E922EC9001C6905 /* ViewControllerIDTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIDTag.swift; sourceTree = "<group>"; };
 		854BD7451E922F3B001C6905 /* NotesViewControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewControllerComponent.swift; sourceTree = "<group>"; };
@@ -168,6 +172,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		85083E541EC6AD75005EEC39 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				85083E571EC6B396005EEC39 /* RangeBoundValue.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
 		856963481E789B5400704C76 /* modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				85AA19591E78AAC3008B5976 /* UIViewExtension.swift */,
+				85083E551EC6B0D6005EEC39 /* ClosedRangeExtension.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -327,6 +340,7 @@
 		B8EEDBCA478FD67E352D9EA5 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				85083E541EC6AD75005EEC39 /* data */,
 				85AA19581E78AAA7008B5976 /* extension */,
 				B8EED8FC680EE0AF385FB9F1 /* presentation */,
 				B8EED277C96CFC6D8D7348B1 /* di */,
@@ -610,9 +624,11 @@
 				B8EEDA30F89CE140B69732A1 /* AppDelegate.swift in Sources */,
 				85AA195A1E78AAC3008B5976 /* UIViewExtension.swift in Sources */,
 				854BD7421E92225E001C6905 /* ViewControllerComponent.swift in Sources */,
+				85083E581EC6B396005EEC39 /* RangeBoundValue.swift in Sources */,
 				854BD7441E922EC9001C6905 /* ViewControllerIDTag.swift in Sources */,
 				8569634A1E789C7500704C76 /* ViewControllerModule.swift in Sources */,
 				B8EED6B0A0F09BFF42588104 /* NotesViewController.swift in Sources */,
+				85083E561EC6B0D6005EEC39 /* ClosedRangeExtension.swift in Sources */,
 				85AA19551E78A4C6008B5976 /* ViewModule.swift in Sources */,
 				B8EED30B2C18EBD518C12164 /* NotesViewModel.swift in Sources */,
 				8566AB971E862F7700115A4E /* Presentable.swift in Sources */,
