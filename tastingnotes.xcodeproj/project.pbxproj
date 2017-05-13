@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85083E531EC6A8C7005EEC39 /* NoteDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85083E521EC6A8C7005EEC39 /* NoteDetails.xib */; };
 		854BD7421E92225E001C6905 /* ViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7411E92225E001C6905 /* ViewControllerComponent.swift */; };
 		854BD7441E922EC9001C6905 /* ViewControllerIDTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7431E922EC9001C6905 /* ViewControllerIDTag.swift */; };
 		854BD7461E922F3B001C6905 /* NotesViewControllerComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854BD7451E922F3B001C6905 /* NotesViewControllerComponent.swift */; };
@@ -69,6 +70,7 @@
 		503089F7EBE6A18645B706EE /* Pods-tastingnotesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesTests/Pods-tastingnotesTests.release.xcconfig"; sourceTree = "<group>"; };
 		815C7D639133FCF9D1324F4E /* Pods_tastingnotes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tastingnotes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E1A3C1EB292609102F2A72 /* Pods-tastingnotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tastingnotesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tastingnotesUITests/Pods-tastingnotesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		85083E521EC6A8C7005EEC39 /* NoteDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteDetails.xib; sourceTree = "<group>"; };
 		854BD7411E92225E001C6905 /* ViewControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerComponent.swift; sourceTree = "<group>"; };
 		854BD7431E922EC9001C6905 /* ViewControllerIDTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerIDTag.swift; sourceTree = "<group>"; };
 		854BD7451E922F3B001C6905 /* NotesViewControllerComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewControllerComponent.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		B8EED3D8D009DDD9E6BB86ED /* NoteDetail */ = {
 			isa = PBXGroup;
 			children = (
+				85083E521EC6A8C7005EEC39 /* NoteDetails.xib */,
 			);
 			path = NoteDetail;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8EEDE72782B3A4E4DC7BF30 /* Assets.xcassets in Resources */,
+				85083E531EC6A8C7005EEC39 /* NoteDetails.xib in Resources */,
 				85DB37DE1E750A980048F42F /* NotesView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
