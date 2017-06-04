@@ -12,6 +12,8 @@ class NotesPresenter : ViewControllerRoot {
     private let view:LoadingTableView
     private let viewModel:NotesViewModel
     private let tableViewDelegate: NotesTableDelegate
+    
+    
     var title: String { get {
             return "Notes"
         }
@@ -22,7 +24,7 @@ class NotesPresenter : ViewControllerRoot {
         
         self.view = view.get()
         self.viewModel = viewModel
-       
+        
         self.tableViewDelegate = NotesTableDelegate(self.view.table)
         self.view.table.delegate = tableViewDelegate
         self.view.table.dataSource = tableViewDelegate
@@ -30,6 +32,10 @@ class NotesPresenter : ViewControllerRoot {
         self.viewModel.notes.onChange(notesChanged)
         self.viewModel.loading.onChange(loadingChanged)
     
+    }
+    
+    func setOpenDetail(callback:@escaping(NoteEntity)->Void){
+        self.tableViewDelegate.noteSelected = callback
     }
     
     public func get() -> UIView {

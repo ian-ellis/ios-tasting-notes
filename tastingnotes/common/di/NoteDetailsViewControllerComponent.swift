@@ -1,25 +1,26 @@
 //
-//  NotesViewControllerComponent.swift
+//  NotesDetailViewControllerComponent.swift
 //  tastingnotes
 //
-//  Created by iellis on 3/04/2017.
+//  Created by iellis on 13/5/17.
 //  Copyright © 2017 IanEllis. All rights reserved.
 //
 
 import Foundation
 import Cleanse
 
-struct NotesVCRoot
+
+struct NoteDetailsVCRoot
 {
-    let presenter:NotesPresenter
-    init(pres:TaggedProvider<NotesPresentable>){
+    let presenter:EditableTitleViewControllerRoot
+    init(pres:TaggedProvider<NoteDetailsPresentable>){
         presenter = pres.get()
     }
-    
 }
 
-struct NotesViewControllerComponent : ViewControllerComponent {
-    typealias Root = NotesVCRoot
+class NoteDetailsViewControllerComponent: ViewControllerComponent  {
+    
+    typealias Root = NoteDetailsVCRoot
     typealias Seed = TaggedProvider<ViewControllerID>
     
     static func configureRoot(binder bind: ReceiptBinder<Root>) -> BindingReceipt<Root> {

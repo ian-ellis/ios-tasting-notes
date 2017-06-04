@@ -16,5 +16,9 @@ struct PresenterModule : Cleanse.Module {
             .tagged(with: NotesPresentable.self)
             .to(factory: NotesPresenter.init)
         
+        binder.bind(NoteDetailsPresenter.self)
+            .tagged(with: NoteDetailsPresentable.self)
+            .to(factory: NoteDetailsPresenter.init)
+        
     }
 }

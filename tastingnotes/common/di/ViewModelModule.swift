@@ -12,7 +12,11 @@ import Cleanse
 struct ViewModelModule : Cleanse.Module {
 
     static func configure<B:Binder>(binder: B) {
-       binder.bind(NotesViewModel.self)
+       
+        binder.bind(NotesViewModel.self)
         .to(factory: NotesViewModel.init)
+        
+        binder.bind(NoteDetailsViewModel.self)
+            .to(factory: NoteDetailsViewModel.init)
     }
 }

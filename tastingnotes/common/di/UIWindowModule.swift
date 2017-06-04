@@ -19,7 +19,9 @@ struct UIWindowModule : Cleanse.Module {
             .bind(UIWindow.self)
             .asSingleton()
             .to {
-                return  UIWindow(frame: UIScreen.main.bounds)
+                let window = UIWindow(frame: UIScreen.main.bounds)
+                window.backgroundColor = UIColor.white
+                return window
         }
         
         binder

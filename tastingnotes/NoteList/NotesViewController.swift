@@ -11,7 +11,7 @@ import Cleanse
 
 class NotesViewController: UIViewController {
 
-    private var presenter: ViewControllerRoot?
+    private var presenter: NotesPresenter?
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -24,11 +24,18 @@ class NotesViewController: UIViewController {
     
     override func loadView() {
         super.loadView()
+        self.edgesForExtendedLayout = []
+        
         let appRoot:AppRoot? = (UIApplication.shared.delegate as! AppDelegate).appRoot
         let factory:ComponentFactory<NotesViewControllerComponent> = appRoot!.notesViewControllerComponentFactory
         let root = factory.build("NotesViewController")
         
         self.presenter = root.presenter
+        
+        self.presenter?.setOpenDetail(callback: { blah in
+            self.navigationController?.pushViewController(NoteDetailsViewController(), animated: true)
+        })
+        
         self.view = self.presenter!.get()
         
         self.navigationItem.title = root.presenter.title

@@ -10,4 +10,11 @@ import Foundation
 
 protocol ViewControllerRoot : Presentable {
     var title: String { get }
+    
+    func viewDidLayoutSubviews()
+    
+}
+extension ViewControllerRoot {
+    func viewDidLayoutSubviews() {
+    }
 }

@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         appRoot = try! ComponentFactory.of(AppComponent.self).build()
         window = appRoot.window
         appRoot.navigationController.setViewControllers([appRoot.rootViewController], animated: false)
+        
+        appRoot.navigationController.navigationBar.backgroundColor = UIColor.black
+        
         window!.rootViewController = appRoot.navigationController
         window!.makeKeyAndVisible()
         

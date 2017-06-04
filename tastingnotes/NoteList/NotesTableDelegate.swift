@@ -11,6 +11,7 @@ import UIKit
     let NOTE_CELL = "noteCell"
 
     var notes:Array<NoteEntity> = []
+    var noteSelected:((NoteEntity)->Void)?
 
 
     init(_ tableView:UITableView){
@@ -30,7 +31,8 @@ import UIKit
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let note = notes[indexPath.row]
+        let note = notes[indexPath.row]
+        noteSelected?(note)
 
     }
 }

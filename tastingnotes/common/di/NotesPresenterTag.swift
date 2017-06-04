@@ -11,6 +11,6 @@ import Cleanse
 
 struct NotesPresentable : Tag {
     typealias Element = NotesPresenter
-    
+
 }
 
