@@ -11,33 +11,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EditableNavigationTitleView" customModule="tastingnotes" customModuleProvider="target">
+        <view contentMode="TopLeft" id="iN0-l3-epB" customClass="EditableNavigationTitleView" customModule="tastingnotes" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-5O-DZh">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV3-5O-DZh">
                     <rect key="frame" x="187.5" y="333.5" width="0.0" height="0.0"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Whi-Jg-XwS">
-                    <rect key="frame" x="175" y="318.5" width="25" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WEH-F7-54n">
+                    <rect key="frame" x="139" y="318" width="97" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="editChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="Nv4-kI-4Mg"/>
+                    </connections>
                 </textField>
             </subviews>
-            <color key="backgroundColor" red="1" green="0.019178495332583645" blue="0.052951840542922346" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="yV3-5O-DZh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="TVX-XF-4ux"/>
-                <constraint firstItem="Whi-Jg-XwS" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jGB-5W-pcZ"/>
-                <constraint firstItem="Whi-Jg-XwS" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uoy-dJ-Fxw"/>
-                <constraint firstItem="yV3-5O-DZh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="vj3-K1-jhb"/>
-            </constraints>
+            <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="titleLabel" destination="yV3-5O-DZh" id="W0j-No-ebF"/>
-                <outlet property="titleText" destination="Whi-Jg-XwS" id="nZT-Tj-8fN"/>
+                <outlet property="titleText" destination="WEH-F7-54n" id="1fN-DQ-7aJ"/>
             </connections>
             <point key="canvasLocation" x="12" y="164"/>
         </view>
