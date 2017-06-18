@@ -18,7 +18,6 @@ class NoteDetailsPresenter : EditableTitleViewControllerRoot {
     private let titleView:EditableNavigationTitleView
     private var titleUpdatedCallback:DisposableEvent?
     
-    
     var title: String { get {
         return "Note Details"
         }
@@ -33,6 +32,8 @@ class NoteDetailsPresenter : EditableTitleViewControllerRoot {
         viewModel.title.onChange(titleChanged)
     }
     
+    //expose views
+    
     public func get() -> UIView {
         return self.view
     }
@@ -41,9 +42,7 @@ class NoteDetailsPresenter : EditableTitleViewControllerRoot {
         return self.titleView
     }
     
-    public func tearDown() {
-        viewModel.tearDown()
-    }
+    // view model bindings
     
     private func titleChanged(title: String) -> Void {
         titleView.title = title
@@ -53,10 +52,16 @@ class NoteDetailsPresenter : EditableTitleViewControllerRoot {
         viewModel.title.value = title
     }
     
+    // view controller callbacks
+    
     public func viewDidLayoutSubviews() {
-        let contentSize = view.content.frame.size
-        let scrollSize = view.scrollView.frame.size
-//        view.scrollView.isScrollEnabled = true
-//        view.scrollView.contentSize = contentSize
+        // TODO: make the scroll view work
+    }
+    
+    // teardown
+    
+    public func tearDown() {
+        viewModel.tearDown()
+        titleUpdatedCallback?.dispose()
     }
 }

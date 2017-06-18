@@ -20,6 +20,7 @@
 		8569634F1E78A0DF00704C76 /* LoadingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8569634E1E78A0DF00704C76 /* LoadingTableView.swift */; };
 		856CC7A91EAC908200F8F803 /* ViewControllerRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856CC7A81EAC908200F8F803 /* ViewControllerRoot.swift */; };
 		857CA9461E6F768D003375AB /* Cleanse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857CA9451E6F768D003375AB /* Cleanse.framework */; };
+		8597F0E71EF6339A00BA5C1C /* VerticalExpandingTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8597F0E61EF6339A00BA5C1C /* VerticalExpandingTextView.swift */; };
 		85AA19531E78A35D008B5976 /* NotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19521E78A35D008B5976 /* NotesView.swift */; };
 		85AA19551E78A4C6008B5976 /* ViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19541E78A4C6008B5976 /* ViewModule.swift */; };
 		85AA19571E78A995008B5976 /* LoadingTableViewTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */; };
@@ -97,6 +98,7 @@
 		8569634E1E78A0DF00704C76 /* LoadingTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableView.swift; sourceTree = "<group>"; };
 		856CC7A81EAC908200F8F803 /* ViewControllerRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerRoot.swift; sourceTree = "<group>"; };
 		857CA9451E6F768D003375AB /* Cleanse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cleanse.framework; path = ../Cleanse/build/Debug/Cleanse.framework; sourceTree = "<group>"; };
+		8597F0E61EF6339A00BA5C1C /* VerticalExpandingTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalExpandingTextView.swift; sourceTree = "<group>"; };
 		85AA19521E78A35D008B5976 /* NotesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesView.swift; sourceTree = "<group>"; };
 		85AA19541E78A4C6008B5976 /* ViewModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModule.swift; sourceTree = "<group>"; };
 		85AA19561E78A995008B5976 /* LoadingTableViewTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingTableViewTag.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				85F1CE0D1EC6F7AD004C13BD /* EditableNavigationTitleView.swift */,
 				85F1CE0F1EC6F7CB004C13BD /* EditableNavigationTitleView.xib */,
+				8597F0E61EF6339A00BA5C1C /* VerticalExpandingTextView.swift */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -687,6 +690,7 @@
 				85DB37DA1E7503460048F42F /* RootViewControllerTag.swift in Sources */,
 				B8EED959361A86F98DAAC8C8 /* NoteEntity.swift in Sources */,
 				85D4ED0C1EC6C3AA007FAFFF /* NoteDetailsPresentable.swift in Sources */,
+				8597F0E71EF6339A00BA5C1C /* VerticalExpandingTextView.swift in Sources */,
 				85D4ED041EC6BB42007FAFFF /* NoteDetailsViewControllerComponent.swift in Sources */,
 				85DB37E51E75F8880048F42F /* NotesRepoTag.swift in Sources */,
 				8569634C1E789DF700704C76 /* RepositoryModule.swift in Sources */,
